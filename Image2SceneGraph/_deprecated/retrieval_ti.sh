@@ -1,0 +1,2 @@
+#!/bin/bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 torchrun --nproc_per_node=8 retrieval_ti.py --subject "$1" --predicate "$2" --object "$3" --image_folder /home/lzj/datasets/subVisualGenome --scene_graph_folder ./outputs/subVisualGenome/out_scene_graphs --result_folder ./outputs/subVisualGenome
